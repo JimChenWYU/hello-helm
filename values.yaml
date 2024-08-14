@@ -1,0 +1,12 @@
+application:
+  name: hellok8s
+  hellok8s:
+    image: jimchen/hellok8s:v8
+    replicas: 3
+    message: "It works with Helm Values[v2]!"
+    database:
+      url: "http://DB_ADDRESS_DEFAULT"
+      password: "db_password"
+  nginx:
+    image: m.daocloud.io/docker.io/library/nginx
+    replicas: 2
